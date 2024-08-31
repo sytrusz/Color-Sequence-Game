@@ -10,19 +10,19 @@ const shuffleArray = (array) => {
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
   return shuffledArray;
-};
+}; // shuffle algorithm
 
 export default function GridLayout() {
   const correctSequence = [
     '#2ecc71', '#2980b9', '#8e44ad', 
     '#2c3e50', '#16a085', '#f1c40f', 
     '#d35400', '#c0392b', '#7ed6df'
-  ];
+  ]; // sakto nga sunod sa color
 
-  const shuffledSequence = shuffleArray(correctSequence);
+  const shuffledSequence = shuffleArray(correctSequence); // shuffle
 
   const [userSequence, setUserSequence] = useState([]);
-  const [colors, setColors] = useState(Array(9).fill('#fff'));
+  const [colors, setColors] = useState(Array(9).fill('#fff')); // coveran ug white (hide)
   const [sequenceMap] = useState(shuffledSequence);
 
   const cardClick = (index) => {
@@ -41,12 +41,12 @@ export default function GridLayout() {
         setColors(newColors);
 
         if (newUserSequence.length === correctSequence.length) {
-          alert('You won!');
+          alert('You won!'); // daog
           
-          const resetGameConfirmation = window.confirm('Do you want to reset the game?');
+          const resetGameConfirmation = window.confirm('Do you want to reset the game?'); // ask user kung reset naba
           if (resetGameConfirmation) {
-            window.location.reload();
-            resetGame();
+            window.location.reload(); // refresh
+            resetGame(); // reshuffle
           }
         }
       } else {
