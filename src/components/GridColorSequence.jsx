@@ -25,8 +25,7 @@ export default function GridColorSequence() {
       <Grid container spacing={1}>
         {correctSequence.map((color) => (
           <Grid item xs={1.33}>
-            <Item color={color}>
-            </Item>
+            <Item color={color}></Item>
           </Grid>
         ))}
       </Grid>

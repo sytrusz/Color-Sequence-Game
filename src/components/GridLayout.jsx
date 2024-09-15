@@ -39,11 +39,11 @@ export default function GridLayout() {
 
         setUserSequence(newUserSequence);
         setColors(newColors);
-
+        
         if (newUserSequence.length === correctSequence.length) {
-          alert('You won!'); // daog
+          alert('You won!'); // daog alert
           
-          const resetGameConfirmation = window.confirm('Do you want to reset the game?'); // ask user kung reset naba
+          const resetGameConfirmation = window.confirm('Do you want to reset the game?'); // ask user kung ireset ba
           if (resetGameConfirmation) {
             window.location.reload(); // refresh
             resetGame(); // reshuffle
